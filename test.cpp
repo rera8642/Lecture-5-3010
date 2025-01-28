@@ -8,7 +8,7 @@
 // Split String
 
 TEST_CASE("Empty Strings return empty vector", "[split]") {
-    REQUIRE( Split("", "").size() == 1 );
+    REQUIRE( Split("", "").size() == 0 );
 }
 
 TEST_CASE("Empty separator returns single length vector.", "[split]") {
