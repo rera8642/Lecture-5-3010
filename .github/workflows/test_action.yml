@@ -1,0 +1,13 @@
+name: Unit Tests
+run-name: ${{ github.actor }} is running unit tests.
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Compiling...
+        run: make all
+      - name: Running unit tests...
+        run: ./test
+      - run: echo "Job Status is ${{ job.status }}."
