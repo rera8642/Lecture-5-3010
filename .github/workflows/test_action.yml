@@ -5,7 +5,8 @@ jobs:
   Run-Unit-Tests:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: checkout repo
+        uses: actions/checkout@main
       - name: Compiling...
         run: make all
       - name: Running unit tests...
